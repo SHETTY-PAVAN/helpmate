@@ -1,0 +1,50 @@
+<!DOCTYPE html!>
+<html>
+    <head>
+        <title>helpmate- Scribe signup Page</title>
+        <link rel="icon" type="image/png" href="./../asset/logos.png"/>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  href="../asset/signup.css">
+        <script src="../asset/signup.js"></script>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <% if(message.length >0){ %>
+            <script>alert(" <%= message %>")</script>
+             <% } %>
+         <div id="id01" class="modal">
+            <form class="modal-content animate" action="/newscribepage" method="POST">
+                <div class="imgcontainer">
+                  <a href="/"><span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span></a>
+                  <img src="../asset/cut1.svg" alt="Avatar" class="avatar">
+                </div>  
+                <div >
+                    <label class="signuptext">Sign up</label>
+                </div>
+                <div>
+                    <input class="textbox" placeholder="First Name" type="text" name="User_firstname" required >
+                    <input class="textbox" placeholder="Last Name" type="text" name="User_lastname" required ><br>
+                    
+                    <input class="textbox" placeholder="Mobile number" type="tel" pattern="[0-9]{10}" title="Mobile should not contain letters and more than 10 digits" name="Mobile_number" required>
+                    <input class="textbox" placeholder="Email" type="text" name="User_email" required ><br>
+                    <input class="textbox" id="password_validate" placeholder="Password" type="password" name="password"  required > <br>
+                    
+                    <input class="textbox" id="cpassword_validate" placeholder="Re-enter password" type="password" name="cpassword" onkeyup='check();' required> <br>
+                    <span class="labelcontainer" id='pas_message'></span>
+
+                    <div style="padding-top: 30px;">
+                    <label class="labelcontainer">  By Signing Up, I Agree to Helpmate Terms of Service and Privacy
+                        <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    </label><br>
+                    </div>
+                    <button class="submitbutton" type="submit" name="submit_btn" onkeyup='check();'  >Sign Up</button>
+                    <label class="loginbtn"> Already have an account? <a href="signin"><b> Sign in Now </b></a></label>
+                </div>
+            </form>
+         </div>
+    </body>
+</html>

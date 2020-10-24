@@ -1,0 +1,270 @@
+<!DOCTYPE html!>
+<html>
+    <head>
+        
+        <title>helpmate- Home Page</title>
+        <link rel="icon" type="image/png" href="./../asset/logos.png"/>
+        
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  href="../asset/home.css">
+
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                 $('.menu-toggle').click(function(){
+                 $('nav').toggleClass('active')
+             })
+              
+            $('ul li').hover(function(){
+                $(this).siblings().removeClass('active');
+                $(this).toggleClass('active');
+            })
+           
+        })
+        
+       
+        </script>
+        <script>
+            $(function() {
+        // Cookies
+        function setCookie(name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+            }
+            else var expires = "";
+
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+//        Validate cookie
+        var myCookie = getCookie("MyCookie");
+        if (myCookie == null) {
+//                alert('No cookei');
+             var body = document.getElementsByTagName('body')[0];
+            var removeLoading = function()
+             {
+              setTimeout(function() {
+                var element = document.getElementById("stloader");
+                    element.classList.remove("stloader");
+                    element.style.visibility="hidden"
+                  }, 5500);
+              };
+              setCookie("MyCookie", "foo", 0.25);
+              removeLoading();
+        }
+        else {
+//                alert('yes cookei');
+           var body = document.getElementsByTagName('body')[0];
+            var removeLoading = function()
+             {
+              setTimeout(function() {
+                var element = document.getElementById("stloader");
+                    element.classList.remove("stloader");
+                    element.style.visibility="hidden"
+                  }, 50);
+              };
+              
+              removeLoading();
+        }
+    });
+</script>
+        </script>
+        <script>
+            
+           
+          </script>
+          <script src="../asset/loader.js"></script>
+          <link rel="stylesheet"  href="../asset/loader.css"> 
+          <style>
+              @font-face
+{
+  
+  src: url(./Open_Sans/OpenSans-Regular.ttf);
+  font-family: openn;
+}
+body{font-family: openn;}
+          </style>
+
+    </head>
+    <body>
+        <div class="stloader" id="stloader"> 
+            <svg id="logo" width="459" height="70" viewBox="0 0 1951 383" fill="none" xmlns="http://www.w3.org/2000/svg" style="" class="">
+                <path d="M246.15 298.2C242.85 299.1 237.6 300 230.4 300.9C223.5 301.8 216.6 302.25 209.7 302.25C202.8 302.25 196.65 301.65 191.25 300.45C186.15 299.55 181.8 297.75 178.2 295.05C174.6 292.35 171.9 288.6 170.1 283.8C168.3 279 167.4 272.7 167.4 264.9V194.7H81V298.2C77.7 299.1 72.45 300 65.25 300.9C58.35 301.8 51.45 302.25 44.55 302.25C37.65 302.25 31.5 301.65 26.1 300.45C21 299.55 16.65 297.75 13.05 295.05C9.45 292.35 6.75 288.6 4.95 283.8C3.15 279 2.25 272.7 2.25 264.9V27.3C5.55 26.7 10.8 25.95 18 25.05C25.2 23.85 32.1 23.25 38.7 23.25C45.6 23.25 51.6 23.85 56.7 25.05C62.1 25.95 66.6 27.75 70.2 30.45C73.8 33.15 76.5 36.9 78.3 41.7C80.1 46.5 81 52.8 81 60.6V132.6H167.4V27.3C170.7 26.7 175.95 25.95 183.15 25.05C190.35 23.85 197.25 23.25 203.85 23.25C210.75 23.25 216.75 23.85 221.85 25.05C227.25 25.95 231.75 27.75 235.35 30.45C238.95 33.15 241.65 36.9 243.45 41.7C245.25 46.5 246.15 52.8 246.15 60.6V298.2Z" stroke="url(#paint0_linear)" stroke-width="4" class="oKCGUgXq_0"></path>
+                <path d="M414.394 307.2C396.694 307.2 380.194 304.8 364.894 300C349.894 294.9 336.694 287.4 325.294 277.5C314.194 267.6 305.344 255.15 298.744 240.15C292.444 225.15 289.294 207.6 289.294 187.5C289.294 167.7 292.444 150.75 298.744 136.65C305.344 122.25 313.894 110.55 324.394 101.55C334.894 92.25 346.894 85.5 360.394 81.3C373.894 76.8 387.694 74.55 401.794 74.55C417.694 74.55 432.094 76.95 444.994 81.75C458.194 86.55 469.444 93.15 478.744 101.55C488.344 109.95 495.694 120 500.794 131.7C506.194 143.4 508.894 156.15 508.894 169.95C508.894 180.15 506.044 187.95 500.344 193.35C494.644 198.75 486.694 202.2 476.494 203.7L365.344 220.35C368.644 230.25 375.394 237.75 385.594 242.85C395.794 247.65 407.494 250.05 420.694 250.05C432.994 250.05 444.544 248.55 455.344 245.55C466.444 242.25 475.444 238.5 482.344 234.3C487.144 237.3 491.194 241.5 494.494 246.9C497.794 252.3 499.444 258 499.444 264C499.444 277.5 493.144 287.55 480.544 294.15C470.944 299.25 460.144 302.7 448.144 304.5C436.144 306.3 424.894 307.2 414.394 307.2ZM401.794 130.35C394.594 130.35 388.294 131.55 382.894 133.95C377.794 136.35 373.594 139.5 370.294 143.4C366.994 147 364.444 151.2 362.644 156C361.144 160.5 360.244 165.15 359.944 169.95L436.894 157.35C435.994 151.35 432.694 145.35 426.994 139.35C421.294 133.35 412.894 130.35 401.794 130.35Z" stroke="url(#paint1_linear)" stroke-width="4" class="oKCGUgXq_1"></path>
+                <path d="M623.566 299.55C620.266 300.15 615.316 300.9 608.716 301.8C602.416 303 595.966 303.6 589.366 303.6C582.766 303.6 576.766 303.15 571.366 302.25C566.266 301.35 561.916 299.55 558.316 296.85C554.716 294.15 551.866 290.55 549.766 286.05C547.966 281.25 547.066 275.1 547.066 267.6V6.59999C550.366 5.99998 555.166 5.24998 561.466 4.34999C568.066 3.14999 574.666 2.54999 581.266 2.54999C587.866 2.54999 593.716 2.99999 598.816 3.89998C604.216 4.79998 608.716 6.59999 612.316 9.29999C615.916 12 618.616 15.75 620.416 20.55C622.516 25.05 623.566 31.05 623.566 38.55V299.55Z" stroke="url(#paint2_linear)" stroke-width="4" class="oKCGUgXq_2"></path>
+                <path d="M772.189 74.55C790.189 74.55 806.839 76.95 822.139 81.75C837.739 86.25 851.089 93.3 862.189 102.9C873.289 112.5 881.989 124.65 888.289 139.35C894.589 153.75 897.739 171 897.739 191.1C897.739 210.3 895.039 227.1 889.639 241.5C884.239 255.9 876.589 268.05 866.689 277.95C856.789 287.55 844.789 294.75 830.689 299.55C816.889 304.35 801.439 306.75 784.339 306.75C771.439 306.75 759.439 304.8 748.339 300.9V375.6C745.339 376.5 740.539 377.4 733.939 378.3C727.339 379.5 720.589 380.1 713.689 380.1C707.089 380.1 701.089 379.65 695.689 378.75C690.589 377.85 686.239 376.05 682.639 373.35C679.039 370.65 676.339 366.9 674.539 362.1C672.739 357.6 671.839 351.6 671.839 344.1V128.1C671.839 120 673.489 113.4 676.789 108.3C680.389 103.2 685.189 98.55 691.189 94.35C700.489 88.35 712.039 83.55 725.839 79.95C739.639 76.35 755.089 74.55 772.189 74.55ZM773.089 246.45C803.989 246.45 819.439 228 819.439 191.1C819.439 171.9 815.539 157.65 807.739 148.35C800.239 139.05 789.289 134.4 774.889 134.4C769.189 134.4 764.089 135.15 759.589 136.65C755.089 137.85 751.189 139.35 747.889 141.15V240.15C751.489 241.95 755.389 243.45 759.589 244.65C763.789 245.85 768.289 246.45 773.089 246.45Z" stroke="url(#paint3_linear)" stroke-width="4" class="oKCGUgXq_3"></path>
+                <path d="M1039.92 74.55C1052.22 74.55 1064.22 76.35 1075.92 79.95C1087.92 83.25 1098.27 88.35 1106.97 95.25C1115.97 89.25 1126.02 84.3 1137.12 80.4C1148.52 76.5 1162.17 74.55 1178.07 74.55C1189.47 74.55 1200.57 76.05 1211.37 79.05C1222.47 82.05 1232.22 86.85 1240.62 93.45C1249.32 99.75 1256.22 108.3 1261.32 119.1C1266.42 129.6 1268.97 142.5 1268.97 157.8V299.55C1265.97 300.45 1261.17 301.35 1254.57 302.25C1248.27 303.15 1241.67 303.6 1234.77 303.6C1228.17 303.6 1222.17 303.15 1216.77 302.25C1211.67 301.35 1207.32 299.55 1203.72 296.85C1200.12 294.15 1197.27 290.55 1195.17 286.05C1193.37 281.25 1192.47 275.1 1192.47 267.6V160.05C1192.47 151.05 1189.92 144.6 1184.82 140.7C1179.72 136.5 1172.82 134.4 1164.12 134.4C1159.92 134.4 1155.42 135.45 1150.62 137.55C1145.82 139.35 1142.22 141.3 1139.82 143.4C1140.12 144.6 1140.27 145.8 1140.27 147C1140.27 147.9 1140.27 148.8 1140.27 149.7V299.55C1136.97 300.45 1132.02 301.35 1125.42 302.25C1119.12 303.15 1112.67 303.6 1106.07 303.6C1099.47 303.6 1093.47 303.15 1088.07 302.25C1082.97 301.35 1078.62 299.55 1075.02 296.85C1071.42 294.15 1068.57 290.55 1066.47 286.05C1064.67 281.25 1063.77 275.1 1063.77 267.6V160.05C1063.77 151.05 1060.92 144.6 1055.22 140.7C1049.82 136.5 1043.22 134.4 1035.42 134.4C1030.02 134.4 1025.37 135.3 1021.47 137.1C1017.57 138.6 1014.27 140.1 1011.57 141.6V299.55C1008.57 300.45 1003.77 301.35 997.172 302.25C990.872 303.15 984.272 303.6 977.372 303.6C970.772 303.6 964.772 303.15 959.372 302.25C954.272 301.35 949.922 299.55 946.322 296.85C942.722 294.15 939.872 290.55 937.772 286.05C935.972 281.25 935.072 275.1 935.072 267.6V131.7C935.072 123.6 936.722 117.15 940.022 112.35C943.622 107.55 948.422 103.05 954.422 98.85C964.622 91.65 977.222 85.8 992.222 81.3C1007.52 76.8 1023.42 74.55 1039.92 74.55Z" stroke="url(#paint4_linear)" stroke-width="4" class="oKCGUgXq_4"></path>
+                <path d="M1409.24 251.4C1414.34 251.4 1419.89 250.95 1425.89 250.05C1432.19 248.85 1436.84 247.35 1439.84 245.55V209.55L1407.44 212.25C1399.04 212.85 1392.14 214.65 1386.74 217.65C1381.34 220.65 1378.64 225.15 1378.64 231.15C1378.64 237.15 1380.89 242.1 1385.39 246C1390.19 249.6 1398.14 251.4 1409.24 251.4ZM1405.64 74.55C1421.84 74.55 1436.54 76.2 1449.74 79.5C1463.24 82.8 1474.64 87.9 1483.94 94.8C1493.54 101.4 1500.89 109.95 1505.99 120.45C1511.09 130.65 1513.64 142.8 1513.64 156.9V257.7C1513.64 265.5 1511.39 271.95 1506.89 277.05C1502.69 281.85 1497.59 286.05 1491.59 289.65C1472.09 301.35 1444.64 307.2 1409.24 307.2C1393.34 307.2 1378.94 305.7 1366.04 302.7C1353.44 299.7 1342.49 295.2 1333.19 289.2C1324.19 283.2 1317.14 275.55 1312.04 266.25C1307.24 256.95 1304.84 246.15 1304.84 233.85C1304.84 213.15 1310.99 197.25 1323.29 186.15C1335.59 175.05 1354.64 168.15 1380.44 165.45L1439.39 159.15V156C1439.39 147.3 1435.49 141.15 1427.69 137.55C1420.19 133.65 1409.24 131.7 1394.84 131.7C1383.44 131.7 1372.34 132.9 1361.54 135.3C1350.74 137.7 1340.99 140.7 1332.29 144.3C1328.39 141.6 1325.09 137.55 1322.39 132.15C1319.69 126.45 1318.34 120.6 1318.34 114.6C1318.34 106.8 1320.14 100.65 1323.74 96.15C1327.64 91.35 1333.49 87.3 1341.29 84C1349.99 80.7 1360.19 78.3 1371.89 76.8C1383.89 75.3 1395.14 74.55 1405.64 74.55Z" stroke="url(#paint5_linear)" stroke-width="4" class="oKCGUgXq_5"></path>
+                <path d="M1636.91 224.85C1636.91 232.65 1639.31 238.2 1644.11 241.5C1649.21 244.8 1656.26 246.45 1665.26 246.45C1669.76 246.45 1674.41 246.15 1679.21 245.55C1684.01 244.65 1688.21 243.6 1691.81 242.4C1694.51 245.7 1696.76 249.45 1698.56 253.65C1700.66 257.55 1701.71 262.35 1701.71 268.05C1701.71 279.45 1697.36 288.75 1688.66 295.95C1680.26 303.15 1665.26 306.75 1643.66 306.75C1617.26 306.75 1596.86 300.75 1582.46 288.75C1568.36 276.75 1561.31 257.25 1561.31 230.25V37.65C1564.61 36.75 1569.26 35.85 1575.26 34.95C1581.56 33.75 1588.16 33.15 1595.06 33.15C1608.26 33.15 1618.46 35.55 1625.66 40.35C1633.16 44.85 1636.91 54.6 1636.91 69.6V98.4H1695.86C1697.66 101.7 1699.31 105.9 1700.81 111C1702.61 115.8 1703.51 121.2 1703.51 127.2C1703.51 137.7 1701.11 145.35 1696.31 150.15C1691.81 154.65 1685.66 156.9 1677.86 156.9H1636.91V224.85Z" stroke="url(#paint6_linear)" stroke-width="4" class="oKCGUgXq_6"></path>
+                <path d="M1853.6 307.2C1835.9 307.2 1819.4 304.8 1804.1 300C1789.1 294.9 1775.9 287.4 1764.5 277.5C1753.4 267.6 1744.55 255.15 1737.95 240.15C1731.65 225.15 1728.5 207.6 1728.5 187.5C1728.5 167.7 1731.65 150.75 1737.95 136.65C1744.55 122.25 1753.1 110.55 1763.6 101.55C1774.1 92.25 1786.1 85.5 1799.6 81.3C1813.1 76.8 1826.9 74.55 1841 74.55C1856.9 74.55 1871.3 76.95 1884.2 81.75C1897.4 86.55 1908.65 93.15 1917.95 101.55C1927.55 109.95 1934.9 120 1940 131.7C1945.4 143.4 1948.1 156.15 1948.1 169.95C1948.1 180.15 1945.25 187.95 1939.55 193.35C1933.85 198.75 1925.9 202.2 1915.7 203.7L1804.55 220.35C1807.85 230.25 1814.6 237.75 1824.8 242.85C1835 247.65 1846.7 250.05 1859.9 250.05C1872.2 250.05 1883.75 248.55 1894.55 245.55C1905.65 242.25 1914.65 238.5 1921.55 234.3C1926.35 237.3 1930.4 241.5 1933.7 246.9C1937 252.3 1938.65 258 1938.65 264C1938.65 277.5 1932.35 287.55 1919.75 294.15C1910.15 299.25 1899.35 302.7 1887.35 304.5C1875.35 306.3 1864.1 307.2 1853.6 307.2ZM1841 130.35C1833.8 130.35 1827.5 131.55 1822.1 133.95C1817 136.35 1812.8 139.5 1809.5 143.4C1806.2 147 1803.65 151.2 1801.85 156C1800.35 160.5 1799.45 165.15 1799.15 169.95L1876.1 157.35C1875.2 151.35 1871.9 145.35 1866.2 139.35C1860.5 133.35 1852.1 130.35 1841 130.35Z" stroke="url(#paint7_linear)" stroke-width="4" class="oKCGUgXq_7"></path>
+                <defs>
+                <linearGradient id="paint0_linear" x1="1023" y1="3.00002" x2="1067" y2="364" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1758F1"></stop>
+                <stop offset="1" stop-color="#36DAE0"></stop>
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="1023" y1="3.00002" x2="1067" y2="364" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1758F1"></stop>
+                <stop offset="1" stop-color="#36DAE0"></stop>
+                </linearGradient>
+                <linearGradient id="paint2_linear" x1="1023" y1="3.00002" x2="1067" y2="364" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1758F1"></stop>
+                <stop offset="1" stop-color="#36DAE0"></stop>
+                </linearGradient>
+                <linearGradient id="paint3_linear" x1="1023" y1="3.00002" x2="1067" y2="364" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1758F1"></stop>
+                <stop offset="1" stop-color="#36DAE0"></stop>
+                </linearGradient>
+                <linearGradient id="paint4_linear" x1="1023" y1="3.00002" x2="1067" y2="364" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1758F1"></stop>
+                <stop offset="1" stop-color="#36DAE0"></stop>
+                </linearGradient>
+                <linearGradient id="paint5_linear" x1="1023" y1="3.00002" x2="1067" y2="364" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1758F1"></stop>
+                <stop offset="1" stop-color="#36DAE0"></stop>
+                </linearGradient>
+                <linearGradient id="paint6_linear" x1="1023" y1="3.00002" x2="1067" y2="364" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1758F1"></stop>
+                <stop offset="1" stop-color="#36DAE0"></stop>
+                </linearGradient>
+                <linearGradient id="paint7_linear" x1="1023" y1="3.00002" x2="1067" y2="364" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1758F1"></stop>
+                <stop offset="1" stop-color="#36DAE0"></stop>
+                </linearGradient>
+                </defs>
+                </svg>
+                
+                
+        </div>
+      
+    <header >
+        <a href="/"><div class="logo"><img src="../asset/cut1.svg" alt="logo" width="222" height="68"></div></a>
+      <nav>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="aboutus" >AboutUs</a></li>
+              <li><a href="contactus">contactUs</a></li>
+              <li><a href="user/posts"> Exams </a></li>
+              
+              <li ><a class="sub" href="signin">signin</a></li>
+              <li class="sub-menu"><a class="sub-menu" href="#">signup</a>
+                <ul>
+                   <li><a href="scribe_signup" >As Scribe</a></li>
+                   <li><a href="student_signup">As student</a></li>
+                </ul>
+               </li>
+              
+            </ul>
+      </nav>
+      <div class="menu-toggle"><i class="fa fa-bars" ></i></div>
+    </header>
+    <div class="sec1">
+        <div class="sec1imgcontainer">
+        <div class="color-container">
+            
+            <img class="sec1img" src="../asset/sec1.svg" alt="logo">
+            
+        </div>
+        </div>
+        <div class="worldbox" >
+            <h1>Helping one person might not change the whole world, but it could change the world for one person</h1> 
+            <p>Be the hands of disabiled students. Apply for the convinent exam and confirm the schedule. write the Exam by listening to students </p>
+            <div style="text-align: left;" >
+            <a href="user/posts"><button class="exambtn" style="margin-top: 2%;" >View now</button></a>
+            </div>
+       </div>
+    </div>
+    <div class="sec2">
+        <div class="worldboxsec2" >
+            <h1>Your success and happiness lies in you. Resolve to keep happy, and your joy and you shall form an invincible host against difficulties</h1> 
+            <p>Post your Exams and get your Scribe </p>
+            <div style="text-align:center;" >
+                <a href="student_signup"><button class="sec2btn" style="margin-top: 5%;" >Post an Exams</button></a>
+            </div>
+
+        </div>
+    </div>
+    <div class="sec3">
+        <div class="sec3block">
+            <p style="font-size: 20px; " >Pushpa Preeya comes from a financially backward family based in Bangalore.Interestingly, she found her calling in voluntarily writing exams for visually-impaired students. Pushpa has written over 600 exams for the disabled students across Karnataka, free of cost till now she has written over 657 exams. she has been writing exams since 2000 for the students who have cerebral palsy and down syndrome or are visually impaired.  She  has been a writer for school, under graduation, post-graduation, and even government exams.
+                She says Patience, Listening skills, Knowledge, facing adverse situations with confidence are virtues to learn from these students. Their high goals and aspiration will make you see yourself in a different light.
+            </p>
+            <div class="sec3imgbg"></div>
+         <div class="sec3img">
+             <img src="../asset/pushpapreeya.jpg" style="width: 100%;">
+         </div>
+         
+        </div>
+
+    </div>
+    <!-- <div class="sec4"> 
+        <div>
+            <h1>Top writerss </h1>
+        </div>
+        <div class="card3">
+            <img src="none" alt="cannot load" style="width: 100%;">
+            <div class="container">
+                <p>name<br>number</p>
+            </div>
+        </div>
+        <div class="card1">
+            <img src="none" alt="cannot load" style="width: 100%;">
+            <div class="container">
+                <p>name<br>number</p>
+            </div>
+        </div>
+        <div class="card2">
+            <img src="none" alt="cannot load" style="width: 100%;">
+            <div class="container">
+                <p>name<br>number</p>
+            </div>
+        </div>
+    </div>-->
+    <footer>
+
+       <div class="logo" style="padding:1.5%; width: 35%;"><img src="../asset/cut1.svg" alt="logo" width="322" height="98"></div>
+
+       <div class="footercon1" >
+        <img height="30px" src="../asset/location.svg"><br>
+        <p >Bangalore, Karnataka, India</p>
+       </div>
+       <div class="footercon1" >
+        <img height="30px" src="../asset/email.svg"><br>
+        <p >help@helpmate.com</p>
+       </div>
+       <div class="footercon1" >
+        <img height="30px" src="../asset/call.svg"><br>
+        <p >080-98432678</p>
+       </div>
+       <div class="footercon1" style=" position: relative;top: -10%;" >
+        <h1 style="margin-bottom: 10%;">Menu</h1>   
+        <a href="aboutus"> <p class="footermenu ">About Us</p></a>
+        <a href="contactus"> <p class="footermenu">Contact Us</p></a>
+        <a href="user/posts"> <p class="footermenu">Exams</p></a>
+        <a href="signin"> <p class="footermenu">sign in</p></a>
+        <a href="scribe_signup"> <p class="footermenu">signup as Scribe</p></a>
+       <a href="student_signup"> <p class="footermenu">signup as Student</p></a>
+       <a href="admin/signin"> <p class="footermenu">Admin</p></a>
+       </div>
+        
+    </footer>
+    </body>
+</html>

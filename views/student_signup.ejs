@@ -1,0 +1,54 @@
+<!DOCTYPE html!>
+<html>
+    <head>
+        <title>helpmate- Student signup Page</title>
+        <link rel="icon" type="image/png" href="./../asset/logos.png"/>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  href="../asset/signup.css">
+        <script src="../asset/signup.js"></script>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <% if(message.length >0){ %>
+            <script>alert(" <%= message %>")</script>
+             <% } %>
+        
+         <div id="id01" class="modal">
+            <form class="modal-content modalbg animate" action="/newstudent" method="POST">
+                <div class="imgcontainer">
+                  <a href="/"><span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span></a>
+                  <img src="../asset/cut1.svg" alt="Avatar" class="avatar">
+                </div>  
+                <div >
+                    <label class="signuptext">Sign up</label>
+                </div>
+                <div>
+                    <input class="textbox" placeholder="Full Name*" type="text" name="student_name" required >
+                    
+                    <input class="textbox" placeholder="Mobile number *" type="tel" pattern="[0-9]{10}" title="Mobile should not contain letters and more than 10 digits" name="student_mobile_number" required><br>
+                    <input class="textbox" type="email" placeholder="Email"  name="student_email" required>
+                   
+                     
+                    <input type="file" class="textbox uploadbtn" id="file_dis" name="student_disability_certificate"required onchange="return fileValidation_dis()"  accept = "application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf, image/*" ><br>
+                    
+                    <input class="textbox" id="password_validate"placeholder="Password" type="password" name="password" required > 
+                    <input type="file" class="textbox uploadbtn up1" id="file_profile" name="student_profileimg" required onchange="return fileValidation_profile()" accept="image/*" ><br><br>
+                
+                    <input class="textbox" id="cpassword_validate" placeholder="Re-enter password" type="password" name="cpassword" onkeyup='check();' required> <br>
+                    <span class="labelcontainer" id='pas_message'></span><br>
+                    <div style="padding-top: 30px;">
+                    <label class="labelcontainer">  By Signing Up, I Agree to Helpmate Terms of Service and Privacy
+                        <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    </label><br>
+                    </div>
+                    <button class="submitbutton" type="submit" name="submit_btn"  >Sign Up</button>
+                    <label class="loginbtn"> Already have an account? <a href="signin"><b> Sign in Now </b></a></label>
+                </div>
+            </form>
+         </div>
+    </body>
+</html>

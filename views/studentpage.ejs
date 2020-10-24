@@ -1,0 +1,116 @@
+<html>
+    <head>
+      <title>helpmate- Student Page</title>
+      <link rel="icon" type="image/png" href="./../asset/logos.png"/>
+        <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet"  href="../asset/signup.css">
+        <link rel="stylesheet"  href="../asset/home.css">
+        <link rel="stylesheet"  href="../asset/model.css">
+        
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                 $('.menu-toggle').click(function(){
+                 $('nav').toggleClass('active')
+             })
+              
+            $('ul li').hover(function(){
+                $(this).siblings().removeClass('active');
+                $(this).toggleClass('active');
+            })
+           
+          })
+         
+          // Get the modal
+var modal = document.getElementById('pincodemodel');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
+        </script>
+    </head>
+    <body>
+      <% if(message.length >0){ %>
+        <script>alert(" <%= message %>")</script>
+         <% } %>
+        <header >
+            <div class="logo"><img src="../asset/cut1.svg" alt="logo" width="222" height="68"></div>
+            <nav>
+                <ul>
+                    <li><a href="aboutus" >AboutUs</a></li>
+                    <li><a href="contactus">contactUs</a></li>
+                    <li><a href="student_posthistory"> history </a></li>
+                    <li><a href="#" onclick="document.getElementById('pincodemodel').style.display='block'"> PostExam</a></li>
+                    <li  class=" sub-menu sub" ><a class="sub-menu" href="#"><%= studentname %></a>
+                      <ul>
+                         <li><a href="student_posthistory" >Posted Exams</a></li>
+                         
+                         <li><a href="home">logout</a></li>
+                      </ul>
+                     </li>
+                     
+                  </ul>
+            </nav>
+            <div class="menu-toggle"><i class="fa fa-bars" ></i></div>
+          </header>
+          <div class="sec2">
+            <div class="worldboxsec2" >
+                <h1>Your success and happiness lies in you. Resolve to keep happy, and your joy and you shall form an invincible host against difficulties</h1> 
+                <p>Post your Exams and get your Scribe </p>
+                <div style="text-align:center;" >
+                    <button class="sec2btn" style="margin-top: 5%;"onclick="document.getElementById('pincodemodel').style.display='block'" >Post an Exams</button>
+                </div>
+    
+            </div>
+        </div>
+          <div id="pincodemodel" class="modall">
+            <span onclick="document.getElementById('pincodemodel').style.display='none'" class="closee" title="Close Modal">×</span>
+            <form class="modal-contentt" action="/requestpage" method="POST">
+              <div class="containerr">
+                <h1 style="padding: 1%;">Postel code of exam center</h1>
+                <p  style="padding: 1%;">Provide PIN code of exam center.<a href="https://www.nativeplanet.com/india-pin-codes/" target="_blank"> Find your pin code here</a></p>
+                <input class="textbox" type="text" pattern="[0-9]{6}" placeholder="Pin Code" name="pincode"  required>
+              
+                <div class="clearfixx">
+                  <button type="button" onclick="document.getElementById('pincodemodel').style.display='none'" class="submitbutton" style="opacity: 0.5;">Cancel</button>
+                  <button type="submit" class="submitbutton">Confirm</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <footer>
+
+            <div class="logo" style="padding:1.5%; width: 35%;"><img src="../asset/cut1.svg" alt="logo" width="322" height="98"></div>
+     
+            <div class="footercon1" >
+             <img height="30px" src="../asset/location.svg"><br>
+             <p >Bangalore, Karnataka, India</p>
+            </div>
+            <div class="footercon1" >
+             <img height="30px" src="../asset/email.svg"><br>
+             <p >help@helpmate.com</p>
+            </div>
+            <div class="footercon1" >
+             <img height="30px" src="../asset/call.svg"><br>
+             <p >080-98432678</p>
+            </div>
+            <div class="footercon1" style=" position: relative;top: -10%;" >
+             <h1 style="margin-bottom: 10%;">Menu</h1>   
+             <a href="aboutus"> <p class="footermenu ">About Us</p></a>
+             <a href="#"> <p class="footermenu">Contact Us</p></a>
+             <a onclick="document.getElementById('pincodemodel').style.display='block'"> <p class="footermenu">Post aExam</p></a>
+             
+            </div>
+             
+         </footer>
+    </body>
+</html>

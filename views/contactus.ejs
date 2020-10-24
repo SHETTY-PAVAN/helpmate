@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helpmate- Contact Us</title>
+        <link rel="icon" type="image/png" href="./../asset/logos.png"/>
+    
+    <link rel="stylesheet" href="../asset/stylec.css">
+    
+</head>
+<body>
+    <% if(message.length >0){ %>
+        <script>alert(" <%= message %>")</script>
+         <% } %>
+    <a href="/"><span  class="close" title="Close Modal">&times;</span></a>
+    <div id="wrap">
+        <h1>SEND A MESSAGE</h1>
+        
+        <br><br><br>
+        <div id="form-wrap">
+            
+            <form action="/contactusdb" method="post">
+                <p>HELLO,</p>
+                <label for="email">Your Message:</label>
+                <textarea name="message" id="message" value="your Message" required></textarea>
+
+                <p>BEST,</p>
+                <label for="name">Name:</label>
+                <input type="text" name="name" value="" id="name" required>
+
+                
+                <label for="email">Email:</label>
+                <input type="text" name="email" value="" id="email" required>
+
+                
+                <input type="submit" name="submit" value="NOW, I SEND THANKS!" >
+            
+            </form> 
+
+        </div>
+    </div>
+</body>
+</html>

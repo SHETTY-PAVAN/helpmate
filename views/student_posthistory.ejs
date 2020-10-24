@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helpmate- Student posts Page</title>
+        <link rel="icon" type="image/png" href="./../asset/logos.png"/>
+    <link rel="stylesheet"  href="../asset/postcard.css">
+</head>
+<body onafterprint="exam_datejs()">
+    
+        <header>
+            <a href="/"><div class="logo"><img src="../asset/cut1.svg" alt="logo" width="222" height="68"></div></a>
+            <h1 style="text-align: center; left: -5%;position: relative;" >Exams</h1>
+        </header>
+        
+    <div class="carddiv" style="width: 90%;">
+       
+
+       
+
+           <%
+           if(result.length!=0){
+           var i=1;
+           result.forEach(function(result){
+           %>
+
+
+           <div class="card" style="background-image: url('./../asset/languagetags/<%=result.exam_language%>.svg');">
+             
+            <h1 style="text-align: center;"><%=result.exam_center %></h1>  
+            <p style="text-align: center;"><%=result.exam_district+", "+result.exam_state %></p><br>
+            <p ><%=result.exam_datetime%></p>
+            <!-- <p>At <%=result.exam_time + " to " + result.exam_duration  + "hours "%></p> -->
+            <h2>Post ID: <%=result.request_id %></h2><br>
+            <%
+             if(result.request_status==1)
+             {
+            %>
+             <h3 style="text-align: center;color: #6C63FF;">Congratulations you have a Scribe to write this Exam</h3> 
+            <h2><%=result.user_firstname+" "+result.user_lastname%></h2><br>
+            <h5>Scribe's Mobile number: <%=result.user_mobile_number %></h5>
+            <h5>Scribe's Email Id: <%=result.user_email %></h5>
+
+            <%
+             }
+             else
+             {
+            %>
+                  
+            <h3 style="text-align: center;color: #6C63FF;"> Waiting for Scribe..</h3> 
+            <%
+             }
+             %>
+
+
+            <div style="text-align:right;" >
+              <a href="/student/deletepost/:<%=result.request_id%>"><button class="sec2btn" >Delete this Exam post</button></a>
+            </div>
+             </div>
+
+             <%  i++; }) %>
+             <% } %>
+         
+            
+    </div>
+
+    </div>
+    
+</body>  
+</html>

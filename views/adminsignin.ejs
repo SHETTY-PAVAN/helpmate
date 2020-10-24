@@ -1,0 +1,44 @@
+<!DOCTYPE html!>
+<html>
+    <head>
+        <title>helpmate- Admin Signin</title>
+        <link rel="icon" type="image/png" href="./../asset/logos.png"/>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  href="../asset/signup.css">
+        
+        <script src="../asset/signup.js"></script>
+    </head>
+    <body>
+        <% if(message.length >0){ %>
+           <script>alert(" <%= message %>")</script>
+            <% } %>
+            
+        
+         <div id="id01" class="modal">
+            <form class="modal-content animate" style="background-image:url('./../asset/adminsignin.svg'); background-size: 50%; margin: 5%;width: 90%;padding: 2%; " action="signin" method="POST">
+                <div class="imgcontainer">
+                  <a href="/"><span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span></a>
+                  <img src="../asset/cut1.svg" alt="Avatar" class="avatar">
+                </div>  
+                <div >
+                    <label class="signuptext">Admin Sign in</label>
+                </div>
+                <div>
+                    
+                    <input class="textbox" placeholder="Admin ID" type="text" name="admin_id" required  ><br>
+                    <input class="textbox" placeholder="Password" type="password" name="admin_password" required > <br>
+                    <div style="padding-top: 30px;">
+                    <label class="labelcontainer">  By Signing in, I Agree to Helpmate Terms of Service and Privacy
+                        <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    </label><br>
+                    </div>
+                    <button class="submitbutton" type="submit" name="submit_btn"  >Sign in</button>
+                    
+                    
+                </div>
+            </form>
+         </div>
+    </body>
+</html>

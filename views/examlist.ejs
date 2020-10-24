@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helpmate- Exam posts</title>
+        <link rel="icon" type="image/png" href="./../asset/logos.png"/>
+    <link rel="stylesheet"  href="../asset/postcard.css">
+</head>
+<body onafterprint="exam_datejs()">
+    
+        <header>
+            <a href="/"><div class="logo"><img src="../asset/cut1.svg" alt="logo" width="222" height="68"></div></a>
+            <h1 style="text-align: center; left: -5%;position: relative;" >Exams</h1>
+        </header>
+        <div class="filterdiv" style="padding: 0% ;">
+         <p style="text-align: center;"></p><br>
+         <P> </P>
+        </div>
+    <div class="carddiv">
+       
+
+       
+
+           <%
+           if(result.length!=0){
+           var i=1;
+           result.forEach(function(result){
+           %>
+
+
+           <div class="card" style="background-image: url('./../asset/languagetags/<%=result.exam_language%>.svg');">
+             
+            <h1 style="text-align: center;"><%=result.exam_center %></h1>  
+            <p style="text-align: center;"><%=result.exam_taluk +", "+result.exam_district+", "+result.exam_state +"- "+result.exam_pincode  %></p>
+            <p ><%=result.exam_date%></p>
+            <p>At <%=result.exam_time + " to " + result.exam_duration  + "hours "%></p>
+            <h2><%=result.student_name %><br>Exam: <%=result.exam_type  %></h2>
+            <p><%=result.exam_center+", "+result.exam_center_address %> </p><br>
+            <p><%=result.exam_taluk +", "+result.exam_district+", "+result.exam_state +"- "+result.exam_pincode  %></p>
+            <div style="text-align:right;" >
+              <a href="/user/posts/applay/:<%=result.request_id%>"><button class="sec2btn" >Apply</button></a>
+            </div>
+             </div>
+
+             <%  i++; }) %>
+             <% } %>
+         
+            
+    </div>
+
+    </div>
+    
+</body>  
+</html>

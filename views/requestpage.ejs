@@ -1,0 +1,114 @@
+<!DOCTYPE html!>
+<html>
+    <head>
+        <title>helpmate- Exam form</title>
+        <link rel="icon" type="image/png" href="./../asset/logos.png"/>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  href="../asset/signup.css">
+        <link rel="stylesheet"  href="../asset/jquery-ui.min.css">
+        <link rel="stylesheet" href="popupS.css">
+        <script src="../asset/signup.js"></script>
+        <script src="../asset/jquery-3.5.1.min.js"></script>
+        <script src="../asset/jquery-ui.min.js"></script>
+        <script src="../asset/dateval.js"></script>
+        <script>
+            $( function() {
+           $( "#datepicker" ).datepicker({ minDate: +1, maxDate: "+3M " });
+           } );
+        </script>
+    </head>
+    <body onload='document.form1.text1.focus()'>
+        <% if(message.length >0){ %>
+            <script>alert(" <%= message %>")</script>
+             <% } %>
+        
+         <div id="id01" class="modal">
+            <form class="modal-content modalbg2 animate" name="form1" action="/request" method="POST">
+                <div class="imgcontainer">
+                  <a href="/studentpage"><span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span></a>
+                  <img src="../asset/cut1.svg" alt="Avatar" class="avatar">
+                </div>  
+                <div >
+                    <label class="signuptext">Post a Exam</label>
+                </div>
+                <div>
+                    
+                    <input class="textboxup"  type="text" name="student_name" value="<%= username %>"  readonly><br>
+                    
+                    <input class="textbox" id="datepicker" placeholder="select the date of EXAM" type="text" pattern="[0-9./]{10}"  name="date"  required>
+                    <label class="textboxlbl">select commence time :    </label>
+                    <select class="textbox" name="select_time" required  >
+                        <option></option>
+                        <option value="07:00:00" >07:00  AM</option>
+                        <option value="08:00:00">08:00  AM</option>
+                        <option value="09:00:00">09:00  AM</option>
+                        <option value="10:00:00">10:00 AM</option>
+                        <option value="11:00:00">11:00 AM</option>
+                        <option value="12:00:00">12:00 AM</option>
+                        <option value="13:00:00">01:00  PM</option>
+                        <option value="14:00:00">02:00  PM</option>
+                        <option value="15:00:00">03:00  PM</option>
+                        <option value="16:00:00">04:00  PM</option>
+                        <option value="17:00:00">05:00  PM</option>
+                        <option value="18:00:00">06:00  PM</option>     
+                    </select><br>
+                    <input class="textbox" placeholder="Full Name of Exam Center" type="text" name="examcenter" pattern="[A-z,\s]{6,}" required>
+                    <label class="textboxlbl">select  duration  of  Exam :</label>
+                    <select class="textbox" name="select_duration" required >
+                        <option></option>
+                        <option value="1" >1 Hours</option>
+                        <option value="2">2 Hours</option>
+                        <option value="3">3 Hours</option>
+                        <option value="4">4 Hours</option>
+                        <option value="5">5 Hours</option>
+                    </select><br>
+                    <input class="textbox" placeholder="Full adderss Of Exam center" type="text" name="examcenteraddress" required>
+                    <label class="textboxlbl">select Exam Language :</label>
+                    <select class="textbox" name="select_language" required >
+                        <option></option>
+                        <option value="English">English</option>
+                        <option value="Kannada">Kannada</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telugu">Telugu</option>
+                        
+                        <option value="Marathi">Marathi</option>
+                        <option value="Urdu">Urdu</option>
+                    </select><br>
+                    <input class="textbox" placeholder="Comments" type="text" name="comments" required>
+                    <label class="textboxlbl">select type of the Exam :</label>
+                    <select class="textbox" name="select_examtype" required >
+                        <option></option>
+                        <option value="School Exam">School Exam</option>
+                        <option value="Pre-university Exam">Pre-university Exam</option>
+                        <option value="Degree Exam">Degree Exam</option>
+                        <option value="Competitive Exam">Competitive Exam</option>
+                        <option value="Ticking or OMR shading Exam">Ticking or OMR shading Exam </option>
+                        <option value="Other Exam">Other Exam</option>
+                        
+                    </select><br>
+                    <input class="textboxup"  type="text" name="taluk" value="Taluk : <%= taluk %>"  readonly>
+                    <input class="textboxup"  type="text" name="District" value="District : <%= District %>"  readonly><br>
+                    <input class="textboxup"  type="text" name="state" value="State : <%= state %>"  readonly>
+                    <input class="textboxup"  type="text" name="pincode" value="PIN code : <%= pincode %>"  readonly>
+                    
+
+
+                    
+
+                    <div style="padding-top: 30px;">
+                    <label class="labelcontainer">  By posting a request, I Agree to Helpmate Terms of Service and Privacy
+                        <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    </label><br>
+                    </div>
+                
+                    <button class="submitbutton" type="submit" name="submit_btn"  onclick="validatedate(document.form1.date)"  >Reuest</button>
+                    <label class="loginbtn">  <a href="/studentpage"><b> Cancel </b></a></label>
+                    
+                </div>
+            </form>
+         </div>
+    </body>
+</html>

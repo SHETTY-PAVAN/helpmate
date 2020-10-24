@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helpmate- About Us</title>
+    <link rel="icon" type="image/png" href="./../asset/logos.png"/>
+    <link rel="stylesheet"  href="../asset/postcard.css">
+    <style>
+       @font-face {
+  font-family: 'Decovar Regular24';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf");
+}
+h1 {
+  margin: 0;
+  font-size: 20vw;
+  font-family: "Decovar Regular24";
+  color: white;
+  width: 500px;
+  font-variation-settings: 'SSTR' 1000;
+  -webkit-animation: loadin 4s infinite linear;
+          animation: loadin 4s infinite linear;
+}
+a
+{
+  padding: 5%;
+}
+@-webkit-keyframes loadin {
+  0% {
+    font-variation-settings: 'SSTR' 1000;
+  }
+  50% {
+    font-variation-settings: 'SSTR' 0;
+  }
+}
+
+@keyframes loadin {
+  0% {
+    font-variation-settings: 'SSTR' 1000;
+  }
+  50% {
+    font-variation-settings: 'SSTR' 0;
+  }
+}
+html {
+  height: 100%;
+}
+
+body {
+  background: rgba(160, 160, 160, 0.1);
+  overflow: hidden;
+  height: 100%;
+}
+
+h1 {
+  position: absolute;
+  margin-top: 1%;
+  margin-left: -9%;
+  z-index: -1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.7),
+                1px -1px 0 rgba(255, 255, 255, 0.7), 
+                -1px 1px 0 rgba(255, 255, 255, 0.7), 
+                1px 1px 0 rgba(255, 255, 255, 0.7), 
+                -1px 2px 1px #a0a0a0, -2px 4px 2px #a0a0a0,
+                 -3px 6px 3px rgba(160, 160, 160, 0.6), 
+                 -4px 8px 4px rgba(160, 160, 160, 0.5),
+                  -5px 10px 5px rgba(160, 160, 160, 0.4),
+                   -6px 12px 6px rgba(160, 160, 160, 0.3),
+                    -7px 13px 7px rgba(160, 160, 160, 0.2),
+                     -8px 15px 8px rgba(160, 160, 160, 0.2), 
+                     -9px 17px 9px rgba(160, 160, 160, 0.2),
+                      -10px 19px 10px rgba(160, 160, 160, 0.2),
+                       -11px 20px 11px rgba(160, 160, 160, 0.1),
+                        -12px 22px 12px rgba(160, 160, 160, 0.1),
+                         -13px 24px 13px rgba(160, 160, 160, 0.1),
+                          -14px 26px 14px rgba(160, 160, 160, 0.1),
+                           -15px 28px 15px rgba(160, 160, 160, 0.1),
+                            -16px 30px 16px rgba(160, 160, 160, 0.1),
+                             -17px 32px 17px rgba(160, 160, 160, 0.1),
+                              -18px 34px 18px rgba(160, 160, 160, 0.1),
+                               -19px 36px 19px rgba(160, 160, 160, 0.1),
+                                -20px 38px 20px rgba(160, 160, 160, 0.1),
+                                 -21px 39px 21px rgba(160, 160, 160, 0.1);
+}
+
+        .aboutusdiv
+        {
+            width: 79%;
+            padding: 10%;
+            min-height: 55vh;
+            /* background-image: url('../asset/cut50.svg'); */
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            
+            
+        }
+        .aboutusp
+        {
+            text-align: justify;
+            
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+        @media(max-width:550px)
+{
+    .aboutusdiv{ padding-top: 35%;}  
+    .aboutusp{font-size: 20px;}
+}
+    </style>
+</head>
+<body>
+    <header>
+      
+    
+       <a href="/"><div class="logo"><img src="../asset/cut1.svg" alt="logo" width="222" height="68"></div></a>
+        <h2 style="text-align: center;" >About Us</h2>
+    </header>
+    <div class="aboutusdiv">
+      
+    
+    <h1 contenteditable>Helpmate</h1>
+        <p class="aboutusp">
+          
+           helpmate web application is contributed to physically challenged people.
+           It is an open webpage where an any public individual can contribute himself by helping this physically challenged people.
+          The main aim of this project is to help physically challenged people  in their education by helping them write their board exams and objective based exams .
+          Each person will be recognised and certified for his support to this physically challenged people..
+          Using this webpage large amount of people can help and support physically challenged people at their free time.<br>
+
+          <br>
+          The website is designed by:<br>
+          <br>
+          Pavan S<br>
+         <br>
+        </p>
+     
+    </div>
+    <script>
+      var h1 = document.querySelector("h1");
+
+h1.addEventListener("input", function() {
+this.setAttribute("data-heading", this.innerText);
+});
+  </script>
+    
+</body>
+</html>

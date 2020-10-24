@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helpmate- Admin View </title>
+        <link rel="icon" type="image/png" href="./../../../asset/logos.png"/>
+    <link rel="stylesheet"  href="../../asset/postcard.css">
+    <link rel="stylesheet"  href="../../asset/adminstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#tbody tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+    
+</head>
+<body>
+    <header>
+        <a href="/admin/admin_dashboard" ><div class="logo"><img src="../../asset/cut1.svg" alt="logo" width="222" height="68"></div></a>
+        <h1 style="text-align: center; left: -5%;position: relative;" >Blocked Scribe</h1>
+        <input type="text" id="search" placeholder="search..." class="searchbox">
+    </header>
+    <div style="padding-top: 8%;">
+    <table>
+        <thead>
+          <th>Scribe id</th>
+          <th>Scribe firstname</th>
+          <th>Scribe lastname </th>
+          <th>Scribe mobile_number </th>
+          <th>Scribe email </th>
+          <th>register_date </th>
+          <th>Un-Block the Scribe</th>
+          
+          
+          
+        </thead>
+        
+            <%
+           if(result.length!=0){
+           var i=1;
+           result.forEach(function(result){
+           %>
+           <tbody id="tbody">
+               <tr>
+            <td><%=result.user_id %></td>
+            <td><%=result.user_firstname %></td>
+            <td><%=result.user_lastname %></td>
+            <td><%=result.user_mobile_number %></td>
+            <td><%=result.user_email %></td>
+            <td><%=result.register_date %></td>
+            <td><a href="admin/view_allscribe/unblockscribe/:<%=result.user_id %>"><button type="submit" style="padding: 5%;background-color: rgb(52, 241, 14);" >Un-Block</button></a> </td>
+            
+             </tr>
+        </tbody>
+
+            <%  i++; }) %>
+             <% } %>
+        
+
+    </div>
+</body>
+</html>

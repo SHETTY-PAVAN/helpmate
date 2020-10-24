@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helpmate- Admin View </title>
+        <link rel="icon" type="image/png" href="./../../asset/logos.png"/>
+    <link rel="stylesheet"  href="../../asset/postcard.css">
+    <link rel="stylesheet"  href="../../asset/adminstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#tbody tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+    
+</head>
+<body>
+    <header>
+        <a href="/admin/admin_dashboard" ><div class="logo"><img src="../../asset/cut1.svg" alt="logo" width="222" height="68"></div></a>
+        <h2 style="text-align: center; left: -5%;position: relative;" >Exams</h2>
+        <input type="text" id="search" placeholder="search..." class="searchbox">
+    </header>
+    
+    <div style="padding-top: 8%;">
+    <table>
+        <thead>
+          <th>Request id</th>
+          <th>student id</th>
+          <th>student name </th>
+          <th>exam_date time </th>
+          
+          <th>exam_center  </th>
+          <th>exam duration </th>
+          <th>exam center_address </th>
+          <th>exam language</th>
+          <th>comments</th>
+          <th>exam_type </th>
+          <th>exam_pincode and address </th>
+          
+          <th>request_time </th>
+          <th>scribe_id </th>
+          <th>request_status  </th>
+          
+          
+          
+        </thead>
+        
+            <%
+           if(result.length!=0){
+           var i=1;
+           result.forEach(function(result){
+           %>
+           <tbody id="tbody">
+               <tr>
+            <td><%=result.request_id %></td>
+            <td><%=result.student_id %></td>
+            <td><%=result.student_name %></td>
+            <td><%=result.exam_datetime %></td>
+            
+            <td><%=result.exam_center %></td>
+            <td><%=result.exam_duration %></td>
+            <td><%=result.exam_center_address %></td>
+            <td><%=result.exam_language %></td>
+            <td><%=result.comments %></td>
+            <td><%=result.exam_type %></td>
+            
+            <td><%=result.exam_taluk %>,<%=result.exam_district %>,<%=result.exam_state %>,<%=result.exam_pincode %></td>
+            <td><%=result.request_time %></td>
+            <td><%=result.scribe_id %></td>
+            <td><%=result.request_status %></td>
+            
+             </tr>
+        </tbody>
+
+            <%  i++; }) %>
+             <% } %>
+        
+
+    </div>
+</body>
+</html>
