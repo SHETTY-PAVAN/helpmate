@@ -1,0 +1,70 @@
+@font-face
+{
+  
+  src: url(./Mulish/static/Mulish-Regular.ttf);
+  font-family: muli;
+}
+@font-face
+{
+  
+  src: url(./Mulish/static/Mulish-Bold.ttf);
+  font-family: mulib;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  th{
+    background-color:#6C63FF;
+    text-align: left;
+    padding: 16px;
+    font-family: mulib;
+  }
+  
+   td {
+    text-align: left;
+    padding: 16px;
+    font-family: muli;
+  }
+  
+  tbody:nth-child(odd)
+  {
+    background-color: #d9d7fc;
+  }
+  h2{
+      font-family: muli;
+      
+      
+      text-align: center;
+      
+      
+  }
+  body{
+      margin: 0;
+  }
+ 
+  .backbutton
+{
+    border-radius: 20px;
+    background-color: orangered;
+    padding: 14px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  float: left;
+  position: fixed;
+  top: 35px;
+}
+.searchbox
+{
+  border: white ;
+  background: #ebecf0;
+  float: right; 
+  padding: 0.45%;
+   border-radius: 7px;
+  box-shadow: inset 5px 5px 6px #acacaf, 
+            inset -5px -5px 6px #ffffff;
+}

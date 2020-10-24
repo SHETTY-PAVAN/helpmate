@@ -1,0 +1,131 @@
+@font-face
+{
+  
+  src: url(./Mulish/static/Mulish-Regular.ttf);
+  font-family: muli;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: muli;
+}
+body
+{
+  background-color: #ebecf0;
+}
+header
+{
+  position: fixed;
+  top: 10px;
+  left:20px;
+  padding: 20px 35px;
+  background: transparent;
+  box-sizing: border-box;
+  width: 97%;
+  border-radius: 10px;
+  background: #ebecf0;
+  box-shadow:  5px 5px 10px #a9aaad, 
+               -5px -5px 10px #ffffff;
+               z-index: 99;
+}
+.card
+{
+  position: relative;
+  
+  left: 2%;
+  width: 90%;
+  border-radius: 10px;
+  padding: 2.5%;
+  padding-bottom: 4%;
+  margin: 2%;
+  background: #ebecf0;
+  box-shadow:  5px 5px 10px #a9aaad, 
+               -5px -5px 10px #ffffff;
+               z-index: 98;
+   background-image:url('./languagetags/englishlang.svg') ;
+   background-repeat: no-repeat;
+   
+   background-position: right top;
+   
+   
+
+
+}
+
+.carddiv
+{
+  position: relative;
+  top: 90px;
+  width: 80%;
+
+
+}
+.applaybtn
+{
+  padding: 10px;
+  position:relative;
+}
+.logo{
+  
+  color: blue;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  float: left;
+  font-weight: bold;
+  margin-top: -7px;
+  margin-left: -30px;
+  margin-right: 40px;
+}
+.sec2btn
+{
+  color: black;
+    width: 20%;
+    padding: 12px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    border: none;
+    background: linear-gradient(145deg, #d4d4d8, #fbfdff);
+    box-shadow:  7px 7px 13px #bababe, 
+             -7px -7px 13px #ffffff;
+    
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+.sec2btn:hover
+{
+  background: #6C63FF;
+    color: #ebecf0;
+    box-shadow:  5px 5px 10px #bcbdc0, 
+             -5px -5px 10px #ffffff;
+
+}
+.sec2btn:focus
+{
+  color: black;
+  background-color: #ebecf0;
+  box-shadow: inset 5px 5px 10px #bababe, 
+    inset -5px -5px 10px #ffffff;
+}
+.filterdiv
+{
+  position: fixed;
+
+  top: 16%;
+  left: 81%;
+  width: 17%;
+  height: 80%;
+  background: #ebecf0;
+  box-shadow:  5px 5px 10px #a9aaad, 
+               -5px -5px 10px #ffffff;
+               z-index: 98;
+
+  border-radius: 10px;
+}
+@media screen and (max-width:600px)
+{
+  .card{width: 90%; margin-bottom: 5%; }
+  .carddiv{width: 98%; margin-top: 20%;}
+  .filterdiv{visibility: hidden;}
+}

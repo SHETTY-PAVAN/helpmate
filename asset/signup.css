@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2:500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.modal-content
+{
+    border-radius: 10px;
+    background: #ebecf0;
+    box-shadow: 11px 11px 27px #848486, 
+                -11px -11px 27px #ffffff;
+    
+    margin: 1% auto 1% auto; 
+    width: 98%;
+    background-image: url("exam.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 50%;
+    background-position-x: 105%;
+    
+    padding-bottom: 2%;
+   
+}
+.modalbg
+{
+  background-image: url("sec2.svg");
+  background-position-x: 100%;
+  background-size: 40%;
+}
+.modalbg2
+{
+  background-image: url("wheelbg.svg");
+  background-size: 35%;
+  /*background-position-x: 160%;*/
+}
+.modal{
+    display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+ 
+  background-color: #ebecf0;
+  padding-top: 0px;
+}
+body
+{
+    background-color: #ebecf0;
+}
+.imgcontainer {
+    text-align: left;
+    margin: 24px 0 12px 40px;
+    position: relative;
+  }
+  
+  
+  .avatar
+   {
+       padding-top: 1%;
+    width: 20%;
+    text-shadow:  20px 20px 60px #6d6d6d, 
+                 -20px -20px 60px #939393;
+    
+  }
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 1px 8px 1px 8px;
+background: linear-gradient(145deg, #d4d4d8, #fbfdff);
+box-shadow:  7px 7px 13px #bababe, 
+             -7px -7px 13px #ffffff;
+  }
+  
+  .close:hover,
+  .close:focus {
+    
+    cursor: pointer;
+    box-shadow: inset 5px 5px 10px #bababe, 
+    inset -5px -5px 10px #ffffff;
+  }
+  .signuptext
+  {
+    text-align: center;
+    
+    padding: 12px 20px;
+    margin: 24px 0 12px 65px;
+    font-size: 2vw; 
+     font-family: 'Baloo Chettan 2', cursive;
+     
+     
+  }
+  .textbox
+  {
+    color: black;
+    width: 27%;
+    padding: 12px 20px;
+    margin: 24px 0 12px 65px;
+    box-sizing: border-box;
+    border: none;
+    background: #ebecf0;
+    box-shadow: inset 5px 5px 10px #bababe, 
+            inset -5px -5px 10px #ffffff;
+    border-radius: 10px;
+    font-family: 'Baloo Chettan 2', cursive;
+    outline: none;
+  }
+  .textbox:hover
+  {
+    box-shadow: inset 5px 5px 6px #acacaf, 
+            inset -5px -5px 6px #ffffff;
+  }
+  .textbox:valid
+  {
+    background: linear-gradient(145deg, #fbfdff, #d4d4d8);
+    box-shadow:  7px 7px 13px #bababe, 
+                 -7px -7px 13px #ffffff;
+                 
+  }
+  .textboxup
+  {
+    color: black;
+    width: 27%;
+    padding: 12px 20px;
+    margin: 24px 0 12px 65px;
+    box-sizing: border-box;
+    border: none;
+    background: linear-gradient(145deg, #fbfdff, #d4d4d8);
+    box-shadow:  7px 7px 13px #bababe, 
+                 -7px -7px 13px #ffffff;
+    border-radius: 10px;
+    font-family: 'Baloo Chettan 2', cursive;
+    outline: none;
+  }
+  .textboxlbl
+  {
+    font-family: 'Baloo Chettan 2', cursive; 
+    width: 27%;
+    margin: 24px 0 0px 75px;
+    
+  }
+  
+  .i{
+    background: #ebecf0;
+    box-shadow:  7px 7px 13px #bababe, 
+             -7px -7px 13px #ffffff;
+    
+  }
+  .labelcontainer {
+    display: block;
+    position: relative;
+    padding-left: 6%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1vw;
+    font-family: 'Baloo Chettan 2', cursive;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  .labelcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    box-shadow:  7px 7px 13px #bababe, 
+             -7px -7px 13px #ffffff;
+    border-radius: 5px;
+    margin-left: 4%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .labelcontainer:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .labelcontainer input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .labelcontainer input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .labelcontainer .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .submitbutton
+  {
+    color: black;
+    width: 15%;
+    padding: 12px 20px;
+    margin: 15px 0px 10px 65px;
+    box-sizing: border-box;
+    border: none;
+    background: #ebecf0;
+    box-shadow:  7px 7px 13px #bababe, 
+             -7px -7px 13px #ffffff;
+    border-radius: 10px;
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 2vw;
+    background: -webkit-linear-gradient(#1758f1, #36dae0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+  .submitbutton:hover
+  {
+    box-shadow:  5px 5px 10px #bcbdc0, 
+             -5px -5px 10px #ffffff;
+  }
+  .submitbutton:focus
+  {
+    box-shadow: inset 5px 5px 10px #bababe, 
+    inset -5px -5px 10px #ffffff;
+  }
+ 
+  .loginbtn
+  {
+      margin:15px 0px 30px 50px;
+      font-family: 'Baloo Chettan 2', cursive;
+  }
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  .uploadbtn::-webkit-file-upload-button {
+    visibility: hidden;
+    padding-left: 0%;
+    border: none;
+    background-color: transparent;
+    
+  }
+  
+ 
+  .uploadbtn::before {
+    
+     content: 'Upload Disablity Certificate* |';
+    
+    color: rgb(129, 129, 126);
+    
+  }
+  .up1::before{
+    content: "Choose profile picture        |";
+  }
+  .popmodal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.popmodal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+.show-popmodal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+ 
+  @media screen and (max-width:600px) 
+  {
+    .avatar{width: 90%;}
+    .imgcontainer{margin:24px 20px 12px 20px;}
+    .signuptext{font-size: 5vw;margin:14px 0 12px 135px;}
+    .labelcontainer{font-size: 2vw; padding-left: 6%; }
+    .checkmark{height: 15px;width: 15px; border-radius: 2px; margin-left: 2%; }
+    .textbox{margin:24px 0 12px 10px ;width: 92%;}
+    .textboxup{margin:24px 0 12px 10px ;width: 92%;}
+    .textboxlbl{width: 92%;margin: 24px 0 0px 93px;}
+    .submitbutton{margin:12px 0 12px 10px ;width: 33%;}
+    .loginbtn{text-align: center; }
+    .labelcontainer .checkmark:after{left: 3px;top: 0px;width: 3px;height: 7px;}
+    .submitbutton{margin:24px 0 12px 10px ;width: 92%;font-size: 5vw;}
+    .close{font-size: 25px;}
+  }

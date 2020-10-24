@@ -1,0 +1,41 @@
+*
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.adminsec1
+{
+    display: block;
+    float: right;
+    
+    margin-top: 11%;
+    margin-right: 11%;
+    padding: 2%;
+    width: 30%;
+    
+    text-align: center;
+
+}
+.smallnumbox
+{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    
+}
+.adminsec2
+{
+    display: block;
+    float: left;
+    
+    margin-top: 11%;
+    margin-left: 11%;
+    padding: 2%;
+    width: 30%;
+    
+    text-align: center;
+
+}
