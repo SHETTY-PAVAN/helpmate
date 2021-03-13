@@ -7,9 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
-    "name": "Adam",
-    "email": "jstutorials1@gmail.com",
-    "url": "http://www.js-tutorials.com/"
+    "name": "Pavan S",
+    "email": "pavans.shetty.2452@gmail.com"
   },
   "license": "MIT",
   "dependencies": {
